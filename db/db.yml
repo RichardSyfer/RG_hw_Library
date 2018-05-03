@@ -1,73 +1,95 @@
----
-- !ruby/struct:Order
-  book: &2 !ruby/struct:Book
-    title: '1984'
-    author: !ruby/object:Author
-      name: George Orwell
-      biography: George Orwell, England, (1903-1950)
-  reader: !ruby/struct:Reader
+--- !ruby/object:Library
+books:
+- &1 !ruby/object:Book
+  title: '1984'
+  author: &10 !ruby/object:Author
+    name: George Orwell
+    biography: George Orwell, England, (1903-1950)
+- &2 !ruby/object:Book
+  title: A Doll's House
+  author: &11 !ruby/object:Author
+    name: Henrik Ibsen
+    biography: Henrik Ibsen, Norway (1828-1906)
+- &3 !ruby/object:Book
+  title: A Sentimental Education
+  author: &12 !ruby/object:Author
+    name: Gustave Flaubert
+    biography: Gustave Flaubert, France, (1821-1880)
+- &5 !ruby/object:Book
+  title: Absalom, Absalom!
+  author: &13 !ruby/object:Author
+    name: William Faulkner
+    biography: William Faulkner, United States, (1897-1962)
+- &7 !ruby/object:Book
+  title: The Adventures of Huckleberry
+  author: &14 !ruby/object:Author
+    name: Mark Twain
+    biography: Mark Twain, United States, (1835-1910)
+orders:
+- !ruby/object:Order
+  book: *1
+  reader: &9 !ruby/object:Reader
     name: HP Laptopych
     email: hplaptop@gmail.com
     city: PLC-Room
     street: EAF St
     house: '11'
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: &5 !ruby/struct:Book
-    title: A Doll's House
-    author: !ruby/object:Author
-      name: Henrik Ibsen
-      biography: Henrik Ibsen, Norway (1828-1906)
-  reader: &1 !ruby/struct:Reader
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *2
+  reader: &4 !ruby/object:Reader
     name: Samsung Phonych
     email: samsphone@gmail.com
     city: Zero-mark
     street: VD Ln
     house: '45'
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: &3 !ruby/struct:Book
-    title: A Sentimental Education
-    author: !ruby/object:Author
-      name: Gustave Flaubert
-      biography: Gustave Flaubert, France, (1821-1880)
-  reader: *1
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: !ruby/struct:Book
-    title: Absalom, Absalom!
-    author: !ruby/object:Author
-      name: William Faulkner
-      biography: William Faulkner, United States, (1897-1962)
-  reader: &6 !ruby/struct:Reader
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *2
+  reader: &6 !ruby/object:Reader
     name: Philips Monitorovich
     email: philipsmonitor@gmail.com
     city: FDA
     street: CCM Sq
     house: '2'
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: !ruby/struct:Book
-    title: The Adventures of Huckleberry
-    author: !ruby/object:Author
-      name: Mark Twain
-      biography: Mark Twain, United States, (1835-1910)
-  reader: &4 !ruby/struct:Reader
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *3
+  reader: *4
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *5
+  reader: *6
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *7
+  reader: &8 !ruby/object:Reader
     name: LG Cellich
     email: lgcell@gmail.com
     city: Ladle-1
     street: LRF St
     house: '5'
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: *2
-  reader: *1
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: *3
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *1
   reader: *4
-  date: 2018-04-30
-- !ruby/struct:Order
-  book: *5
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *3
+  reader: *8
+  date: 2018-05-03
+- !ruby/object:Order
+  book: *2
   reader: *6
-  date: 2018-04-30
+  date: 2018-05-03
+readers:
+- *6
+- *9
+- *4
+- *8
+authors:
+- *10
+- *11
+- *12
+- *13
+- *14
