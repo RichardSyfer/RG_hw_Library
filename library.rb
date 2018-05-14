@@ -20,7 +20,7 @@ class Library
   end
 
   def popularity_best_books
-    best_books = sort_by(:book, 10)
+    best_books = sort_by(:book, 3)
     best_books.map{|(_,orders)| orders}.flatten.map(&:reader).uniq.count
   end
 
