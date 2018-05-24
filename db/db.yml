@@ -34,7 +34,7 @@ orders:
     city: PLC-Room
     street: EAF St
     house: '11'
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *2
   reader: &4 !ruby/object:Reader
@@ -43,7 +43,7 @@ orders:
     city: Zero-mark
     street: VD Ln
     house: '45'
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *2
   reader: &6 !ruby/object:Reader
@@ -52,15 +52,15 @@ orders:
     city: FDA
     street: CCM Sq
     house: '2'
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *3
   reader: *4
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *5
   reader: *6
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *7
   reader: &8 !ruby/object:Reader
@@ -69,19 +69,19 @@ orders:
     city: Ladle-1
     street: LRF St
     house: '5'
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *1
   reader: *4
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *3
   reader: *8
-  date: 2018-05-03
+  date: 2018-05-24
 - !ruby/object:Order
   book: *2
   reader: *6
-  date: 2018-05-03
+  date: 2018-05-24
 readers:
 - *6
 - *9

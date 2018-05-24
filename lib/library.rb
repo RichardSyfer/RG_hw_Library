@@ -1,4 +1,4 @@
-require './data_loader'
+require_relative './data_loader'
 
 class Library
   include DataLoader
@@ -21,12 +21,12 @@ class Library
 
   def popularity_best_books
     best_books = sort_by(:book, 3)
-    best_books.map{|(_,orders)| orders}.flatten.map(&:reader).uniq.count
+    best_books.map { |(_, orders)| orders }.flatten.map(&:reader).uniq.count
   end
 
   private
 
   def sort_by(klass, num = nil)
-    orders.group_by(&klass).max_by(num){|_, orders| orders.count}
+    orders.group_by(&klass).max_by(num) { |_, orders| orders.count }
   end
 end
